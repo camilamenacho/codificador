@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codificador</title>
+    <link rel="stylesheet" href="./codificador.css">
+    <script src="./codificador.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Codificador</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Insira sua mensagem:</p>
+            <input type="text" name="mensagem" id="mensagem"> 
+        </div>
+        <div id="selecao">
+            <p>Selecione a opção desejada: </p> 
+            <select name="metodo" id="metodo" onclick="selecaoMetodo()">
+                <option value="cifraCesar">Cifra de César</option>
+                <option value="base64">Base 64</option>
+                
+            </select> 
+        </div>
+        <div id = "divchave">
+            <p>Insira o número da chave:</p>
+            <input type="number" name="deslocamento" id="deslocamento" min="1" max="26">
+        </div>
+        <div id="divmetodo">
+            <p>Você deseja:</p>
+            <input type="radio" name="codificar" id="codificar" value="codificar">
+            <label for="codificar">Codificar</label>
+            <input type="radio" name="codificar" id="decodificar" value="decodificar">
+            <label for="decodificar">Decodificar</label>
+        </div>
+        <div>
+            <p>Resultado:</p>
+            <input type="text" name="resultado" id="resultado">
+        </div>
+        <button id="botao">Codificar</button>
+    </section>
+
+    <footer>
+        <p>&copy; Camila Menacho</p>
+    </footer>
+</body>
+</html>
